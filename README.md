@@ -5,4 +5,4 @@ This tool will check the current evidence file, mounted as an E01 EnCase file, a
 
 [Spirion](https://www.spirion.com/)
 
-[](EnCase)
+[EnCase](https://www.guidancesoftware.com/encase-forensic)
