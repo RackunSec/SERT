@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: iso-8859-15 -*-
+
 # 2019 SERT, Spirion EnCase Reporting Tool
 #
 # 1. Extract the CSV of results from Spirion
@@ -26,7 +28,18 @@ class Color:
 color = Color()
 # Custom user-defined functions:
 def usage():
-    print(color.red+"[ERROR] Usage: ... "+color.rst)
+    print color.cyan+"""
+  ██████ ▓█████  ██▀███  ▄▄▄█████▓
+▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒▓  ██▒ ▓▒
+░ ▓██▄   ▒███   ▓██ ░▄█ ▒▒ ▓██░ ▒░
+  ▒   ██▒▒▓█  ▄ ▒██▀▀█▄  ░ ▓██▓ ░
+▒██████▒▒░▒████▒░██▓ ▒██▒  ▒██▒ ░
+▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░  ▒ ░░
+░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░    ░
+░  ░  ░     ░     ░░   ░   ░
+      ░     ░  ░   ░
+ """+color.rst
+    print(color.red+"[ERROR] Usage: ./sert.py (path to Spirion CSV) (Path to evidence drive) (Report name)"+color.rst)
 def hello():
     print(color.yellow+"\nSERT"+color.green+", Spirion EnCase Reporting Tool\n"+color.rst)
 def brackets(string):
