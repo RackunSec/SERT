@@ -27,9 +27,24 @@ In my case above, it is ```/mnt/raw/ewf1p3```. That offset is ```468992``` as sh
 root@demon:~# mkidr /mnt/evidence
 mount /mnt/raw/ewf1 /mnt/evidence/ -o ro,loop,show_sys_files,streams_interace=windows,offset=$((468992*512))
 ```
-We can now run SERT tool with this as the evidence PATH.
+## Running SERT
+To run SERT, we pass three arguments,
+  1. The path to the Spirion PII file report
+  2. The path to the mounted EWF/E01 Drive
+  3. The path and name of the report file to generate (this will append the UNIX date and ".csv")
 
-## Referfences
+```
+root@demon:~/Code/Workspaces/SERT# ./sert.py ~/pii_spirion_file.csv /mnt/evidence/ ~/report_name
+
+SERT, Spirion EnCase Reporting Tool
+
+[msg] Got /root/pii_spirion_file.csv for the Spirion file.
+[msg] Got /mnt/evidence/ as the evidence mount point.
+[msg] Got report title of /root/report_name for the report.
+
+```
+
+## References
 
 [Mounting EWF Images with Linux](https://www.andreafortuna.org/2018/04/11/how-to-mount-an-ewf-image-file-e01-on-linux/)
 
