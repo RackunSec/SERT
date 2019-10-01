@@ -62,8 +62,8 @@ if len(sys.argv) == 4:
                 cleanLine = re.sub(r'\\','/',splitline[6])
                 #cleanLine = cleanLine.replace(' ','\ ')
                 cleannodrive = re.sub(r'^[A-Z]:','',cleanLine)
-                if splitline[6] not in piiFiles and len(splitline[6]) > evidencePathLen:
-                    piiFiles.append(evidencePath+cleannodrive) # track the file being processed
+                if cleannodrive not in piiFiles: #and len(evidencePath+cleannodrive) > evidencePathLen:
+                    piiFiles.append(cleannodrive) # track the file being processed
                     try:
                         info=os.stat(evidencePath+cleannodrive) # process the file and print the result:
                         result=splitline[6]+","+time.ctime(info[stat.ST_MTIME])+","+time.ctime(info[stat.ST_ATIME])+","+time.ctime(info[stat.ST_CTIME])+"\n"
@@ -72,7 +72,8 @@ if len(sys.argv) == 4:
                     except OSError,e:
                         print(brackets("ERROR")+str(e))
                         continue
-        csv_file.close()
+        csv_file.close() # close the CSV Spirion PII File
+        log.close() # close the log file
     except IOError,e:
         print(brackets("ERROR")+str(e)+"\n")
         # sys.exit() # DEBUG
