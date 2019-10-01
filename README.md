@@ -1,6 +1,8 @@
 # SERT
 ## Spirion EnCase Reporting Tool
 
+![Screenshot of Terminal Image](images/screenshot.png)
+
 This tool will check the current evidence file, mounted as an E01 EnCase file, and match the Spirion results for generating reports for litigation purposes.
 
 ## Mount EWF (E01) Image in Debian
