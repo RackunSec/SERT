@@ -39,7 +39,7 @@ def usage():
 ░  ░  ░     ░     ░░   ░   ░
       ░     ░  ░   ░
  """+color.rst
-    print(color.red+"[ERROR] Usage: ./sert.py (path to Spirion CSV) (Path to evidence drive) (Report name)"+color.rst)
+    print(color.red+"[ERROR] Usage: ./sert.py (Spirion CSV) (Evidence drive) (Report name)"+color.rst)
 def hello():
     print(color.yellow+"\nSERT"+color.green+", Spirion EnCase Reporting Tool\n"+color.rst)
 def brackets(string):
