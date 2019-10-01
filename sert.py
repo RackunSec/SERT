@@ -56,7 +56,7 @@ if len(sys.argv) == 4:
     # Do stuff
     print(brackets("msg")+"Got "+color.green+sys.argv[1]+color.rst+" for the Spirion file.")
     print(brackets("msg")+"Got "+color.green+sys.argv[2]+color.rst+" as the evidence mount point.")
-    print(brackets("msg")+"Got filetype of "+color.green+sys.argv[3]+color.rst+" for the report.\n")
+    print(brackets("msg")+"Got report title as "+color.green+sys.argv[3]+color.rst+"\n")
     piiFiles = [] # this is the files found in the Spirion CSV Export
     evidencePath=sys.argv[2] # Path to Mounted Evidence
     evidencePath=re.sub(r'/$','',sys.argv[2])
