@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SERT
+Comment=Spirion EnCase Report Tool
+Exec=gnome-terminal -e "bash -c \"cd /infosec/forensics/SERT && ./sert.py;bash\"";
+Icon=/usr/share/demon/images/icons/weaknet.png
+StartupNotify=false
+Terminal=true
+Categories=forensics
